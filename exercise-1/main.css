@@ -1,0 +1,28 @@
+h3 {
+    text-align: center;
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.people_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    list-style-type: none;
+}
+.person {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    border-width: .2em;
+    max-width: 160px;
+}
+.person .name {
+    text-align: center;
+}
+.person .details {
+    display: flex;
+    flex-wrap: wrap;
+}

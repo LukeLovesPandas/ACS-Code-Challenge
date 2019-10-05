@@ -1,44 +1,10 @@
 <html>
     <head>
-        <style>
-            #main {
-                display: flex;
-                justify-content: center;
-            }
-            .people_list {
-                display: flex;
-                flex-direction: column;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="./main.css"/>
     </head>
     <body>
         <div id="main">Please wait while we look for the users...</div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"></script>
-        <script>
-            const loadData = async () => {
-                let people = await fetch('http://5d7a59779edf7400140aa043.mockapi.io/dieter')
-                    .then(async (fetchResponse) => fetchResponse.ok ? fetchResponse.json() : []);
-                var template  = Handlebars.compile(
-                    `
-                    {{#if people}}
-                        <ul class="people_list">
-                            {{#each people}}
-                                <li><img src="{{this.avatar}}"> ID: {{this.id}} - Name: {{this.name}} - CreatedAt: {{this.createdAt}}</li>
-                            {{/each}}
-                        </ul>
-                    {{else}}
-                        We could not find any users at the moment. Sorry.
-                    {{/if}}
-                    `
-                );
-                
-                var context = {people};
-                var html = template(context);
-                document.getElementById('main').innerHTML = html;
-            }
-
-            loadData();
-
-        </script>
+        <script src="./main.js"></script>
     </body>
 </html>
