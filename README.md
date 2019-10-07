@@ -49,3 +49,6 @@ Solve the problems presented in whatever way you deem most appropriate and in ke
     * The form fills 100% width of the screen up until 375px wide
     * The form becomes centered in the page after 375px
     * There should be no horizontal scroll bars present at any width
+
+#### Luke's Additions and notes
+1. To properly change css, run 'npm install && npm run build-css' to compile css from scss
